@@ -4,6 +4,7 @@
         {{ tarea }}
     </li>
     <button @click="eliminarTarea" type="button" class="btn btn-outline-danger btn-sm mb-3">Eliminar</button>
+    <br>
 </div>
 </template>
 
@@ -22,8 +23,14 @@ methods: {
 }
 </script>
 
-<style scoped>
-.listado > li {
-  width: 100%;
+<style>
+.listado {
+    display: flex;
+    justify-content: center;
 }
+
+.listado > li {
+    width: 50%;
+}
+
 </style>

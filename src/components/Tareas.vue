@@ -7,7 +7,7 @@
       </div>
       <h2 class="text-center my-5 text-secondary">Lista</h2>
       <ol>
-          <div class="lista">
+          <div>
               <Listado @eliminarTarea="eliminarTarea($event)" v-for="(tarea, $index) in tareas" :key="$index" :tarea="tarea" :index="$index"/>
           </div>
       </ol>
@@ -36,12 +36,4 @@ methods: {
 </script>
 
 <style>
-.lista {
-  display: flex;
-  justify-content: center;
-}
-
-.listado > li {
-  width: 100%;
-}
 </style>
