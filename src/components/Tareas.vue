@@ -25,10 +25,10 @@ data: () => ({
 }),
 methods: {
     addTarea() {
-        this.tareas.unshift(this.tarea)
+        this.tareas.push(this.tarea)
         this.tarea=''
     },
-    eliminarTarea() {
+    eliminarTarea(key) {
         this.tareas.splice(key,1)
     }
 }
