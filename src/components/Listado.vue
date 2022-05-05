@@ -1,13 +1,10 @@
 <template>
-    <div>
-        <h2 class="text-center my-5 text-secondary">Lista</h2>
-        <ol>
-            <div v-for="(tarea, $index) in tareas" :key="$index" class="lista">
-                <li class="mb-3">{{ tarea }}holi</li>
-                <button @click="tareas.splice(index, 1)" type="button" class="btn btn-outline-danger btn-sm mb-3">Eliminar</button>
-            </div>
-        </ol>
-    </div>
+<div class="listado">
+    <li class="mb-3">
+        {{ tarea }}
+    </li>
+    <button @click="eliminarTarea" type="button" class="btn btn-outline-danger btn-sm mb-3">Eliminar</button>
+</div>
 </template>
 
 <script>
@@ -17,18 +14,16 @@ props: {
     tarea: String,
     index: Number
 },
-data: () => ({
-    
-})
+methods: {
+    eliminarTarea(){
+        this.$emit("eliminarTarea", this.index)
+    }
+}
 }
 </script>
 
-<style>
-.lista {
-  display: flex;
-  justify-content: center;
-}
-.lista > li {
-  width: 50%;
+<style scoped>
+.listado > li {
+  width: 100%;
 }
 </style>

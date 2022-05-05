@@ -20,13 +20,5 @@ export default {
 </script>
 
 <style>
-#app {
-    font-size: 38px;
-    font-family: 'Calibri', sans-serif;
-    color: darkblue;
-}
-img {
-  width: 25%;
-  height: 25%;
-}
+
 </style>
